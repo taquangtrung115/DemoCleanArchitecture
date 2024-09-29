@@ -1,15 +1,12 @@
 ﻿using HR.LeaveManagement.Application.DTO.Common;
-using HR.LeaveManagement.Application.DTO.LeaveType;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace HR.LeaveManagement.Application.DTO.LeaveRequest
 {
-    public class LeaveRequestListDTO : BaseDTO
+    public class ChangeLeaveRequestApprovalDTO : BaseDTO
     {
-        public LeaveTypeDTO LeaveType { get; set; }
-        public DateTime DateRequested { get; set; }
         public bool? Approved { get; set; }
     }
 }
