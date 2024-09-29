@@ -1,7 +1,8 @@
 ﻿using HR.LeaveManagement.Application.DTO.Common;
+using HR.LeaveManagement.Application.DTO.LeaveType;
 using System;
 
-namespace HR.LeaveManagement.Application.DTO
+namespace HR.LeaveManagement.Application.DTO.LeaveRequest
 {
     public class LeaveRequestDTO : BaseDTO
     {
@@ -11,7 +12,7 @@ namespace HR.LeaveManagement.Application.DTO
         public int LeaveTypeID { get; set; }
         public DateTime DateRequested { get; set; }
         public string RequestComments { get; set; }
-        public DateTime DateActioned { get; set; }
+        public DateTime? DateActioned { get; set; }
         public bool? Approved { get; set; }
         public bool Cancelled { get; set; }
     }
