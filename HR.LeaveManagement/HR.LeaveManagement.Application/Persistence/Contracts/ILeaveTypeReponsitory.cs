@@ -8,7 +8,6 @@ namespace HR.LeaveManagement.Application.Persistence.Contracts
 {
     public interface ILeaveTypeReponsitory : IGenericReponsitory<LeaveType>
     {
-        Task<LeaveType> GetLeaveTypeWithDetails(int id);
-        Task<List<LeaveType>> GetLeaveTypeWithDetails();
+       
     }
 }
