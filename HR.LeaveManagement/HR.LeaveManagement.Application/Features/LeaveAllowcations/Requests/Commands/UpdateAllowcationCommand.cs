@@ -8,6 +8,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllowcations.Requests.Com
 {
     public class UpdateAllowcationCommand : IRequest<Unit>
     {
+        public int ID { get; set; }
         public UpdateLeaveAllowcationDTO LeaveAllowcationDTO { get; set; }
     }
 }
