@@ -1,4 +1,4 @@
-﻿using HR.LeaveManagement.Application.Persistence.Contracts;
+﻿using HR.LeaveManagement.Application.Contracts.Persistence;
 using HR.Management.Persistence.Reponsitory;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
