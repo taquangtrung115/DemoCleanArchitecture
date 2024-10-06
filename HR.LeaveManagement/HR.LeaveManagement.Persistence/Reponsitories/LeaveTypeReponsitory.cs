@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HR.Management.Persistence.Reponsitory
+namespace HR.LeaveManagement.Persistence.Reponsitories
 {
     public class LeaveTypeReponsitory : GenericReponsitory<LeaveType>, ILeaveTypeReponsitory
     {

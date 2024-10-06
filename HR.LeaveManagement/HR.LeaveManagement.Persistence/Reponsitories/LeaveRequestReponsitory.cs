@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace HR.Management.Persistence.Reponsitory
+namespace HR.LeaveManagement.Persistence.Reponsitories
 {
     public class LeaveRequestReponsitory : GenericReponsitory<LeaveRequest>, ILeaveRequestReponsitory
     {
@@ -24,13 +24,13 @@ namespace HR.Management.Persistence.Reponsitory
 
         public async Task<LeaveRequest> GetLeaveRequestWithDetails(int id)
         {
-            var leaveRequest = await _dbContext.LeaveRequest.Include(s => s.LeaveType).FirstOrDefaultAsync(s => s.ID == id);
+            var leaveRequest = await _dbContext.LeaveRequests.Include(s => s.LeaveType).FirstOrDefaultAsync(s => s.ID == id);
             return leaveRequest;
         }
 
         public async Task<List<LeaveRequest>> GetLeaveRequestWithDetails()
         {
-            var leaveRequests = await _dbContext.LeaveRequest.Include(s => s.LeaveType).ToListAsync();
+            var leaveRequests = await _dbContext.LeaveRequests.Include(s => s.LeaveType).ToListAsync();
             return leaveRequests;
         }
     }
