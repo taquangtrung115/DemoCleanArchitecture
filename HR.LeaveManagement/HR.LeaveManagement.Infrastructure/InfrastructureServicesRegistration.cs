@@ -1,6 +1,6 @@
 ﻿using HR.LeaveManagement.Application.Contracts.Infrastructure;
 using HR.LeaveManagement.Application.Models;
-using HR.Management.Infrastructure.Mail;
+using HR.LeaveManagement.Infrastructure.Mail;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace HR.Management.Infrastructure
+namespace HR.LeaveManagement.Infrastructure
 {
     public static class InfrastructureServicesRegistration
     {

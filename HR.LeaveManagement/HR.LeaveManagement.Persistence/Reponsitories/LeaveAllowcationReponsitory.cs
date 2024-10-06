@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HR.Management.Persistence.Reponsitory
+namespace HR.LeaveManagement.Persistence.Reponsitories
 {
     public class LeaveAllowcationReponsitory : GenericReponsitory<LeaveAllocation>, ILeaveAllocationReponsitory
     {
@@ -18,13 +18,13 @@ namespace HR.Management.Persistence.Reponsitory
 
         public async Task<LeaveAllocation> GetLeaveAllowcationWithDetails(int id)
         {
-            var leaveRequest = await _dbContext.LeaveAllowcation.Include(s => s.LeaveType).FirstOrDefaultAsync(s => s.ID == id);
+            var leaveRequest = await _dbContext.LeaveAllocations.Include(s => s.LeaveType).FirstOrDefaultAsync(s => s.ID == id);
             return leaveRequest;
         }
 
         public async Task<List<LeaveAllocation>> GetLeaveAllowcationWithDetails()
         {
-            var leaveRequests = await _dbContext.LeaveAllowcation.Include(s => s.LeaveType).ToListAsync();
+            var leaveRequests = await _dbContext.LeaveAllocations.Include(s => s.LeaveType).ToListAsync();
             return leaveRequests;
         }
     }

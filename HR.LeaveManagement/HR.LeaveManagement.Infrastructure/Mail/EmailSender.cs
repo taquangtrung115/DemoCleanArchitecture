@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HR.Management.Infrastructure.Mail
+namespace HR.LeaveManagement.Infrastructure.Mail
 {
     public class EmailSender : IEmailSender
     {
