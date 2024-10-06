@@ -10,8 +10,8 @@ namespace HR.LeaveManagement.Persistence.Reponsitories
 {
     public class LeaveAllowcationReponsitory : GenericReponsitory<LeaveAllocation>, ILeaveAllocationReponsitory
     {
-        private readonly LeaveManagenmentDBContext _dbContext;
-        public LeaveAllowcationReponsitory(LeaveManagenmentDBContext dbContext) : base(dbContext)
+        private readonly LeaveManagementDbContext _dbContext;
+        public LeaveAllowcationReponsitory(LeaveManagementDbContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
         }

@@ -9,8 +9,8 @@ namespace HR.LeaveManagement.Persistence.Reponsitories
 {
     public class GenericReponsitory<T> : IGenericReponsitory<T> where T : class
     {
-        private readonly LeaveManagenmentDBContext _dbContext;
-        public GenericReponsitory(LeaveManagenmentDBContext dbContext)
+        private readonly LeaveManagementDbContext _dbContext;
+        public GenericReponsitory(LeaveManagementDbContext dbContext)
         {
             _dbContext = dbContext;
         }
