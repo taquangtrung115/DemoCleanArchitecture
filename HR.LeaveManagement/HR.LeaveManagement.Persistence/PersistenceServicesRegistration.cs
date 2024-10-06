@@ -17,9 +17,8 @@ namespace HR.LeaveManagement.Persistence
     {
         public static IServiceCollection ConfigurePersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<LeaveManagenmentDBContext>(options =>
-               options.UseSqlServer(
-                   configuration.GetConnectionString("LeaveManagementConnectionString")));
+            services.AddDbContext<LeaveManagementDbContext>(options =>
+               options.UseSqlServer(configuration.GetConnectionString("LeaveManagementConnectionString")));
 
 
             services.AddScoped(typeof(IGenericReponsitory<>), typeof(GenericReponsitory<>));

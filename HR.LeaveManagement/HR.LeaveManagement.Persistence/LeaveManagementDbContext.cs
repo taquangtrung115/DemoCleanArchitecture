@@ -9,16 +9,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HR.LeaveManagement.Persistence
 {
-    public class LeaveManagenmentDBContext : AuditableDbContext
+    public class LeaveManagementDbContext : AuditableDbContext
     {
-        public LeaveManagenmentDBContext(DbContextOptions<LeaveManagenmentDBContext> options)
+        public LeaveManagementDbContext(DbContextOptions<LeaveManagementDbContext> options)
             : base(options)
         {
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(LeaveManagenmentDBContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(LeaveManagementDbContext).Assembly);
         }
 
         public DbSet<LeaveRequest> LeaveRequests { get; set; }
