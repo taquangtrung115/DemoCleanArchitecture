@@ -38,11 +38,6 @@ namespace HR.LeaveManagement.API.Controllers
 
         // POST api/<LeaveRequestController>
         [HttpPost]
-        public void Post([FromBody] string value)
-        {
-
-        }
-        [HttpPost]
         public async Task<ActionResult<CreateLeaveRequestDTO>> Post([FromBody] CreateLeaveRequestDTO leaveRequest)
         {
             var command = new CreateLeaveRequestCommand { LeaveRequestDTO = leaveRequest };
