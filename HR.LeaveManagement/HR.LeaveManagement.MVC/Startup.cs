@@ -1,9 +1,8 @@
-﻿
-
-using HR.LeaveManagement.MVC.Services;
+﻿using HR.LeaveManagement.MVC.Services;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 using HR.LeaveManagement.MVC.Contracts;
+using HR.LeaveManagement.MVC.Services.Base;
 
 namespace HR.LeaveManagement.MVC
 {
@@ -21,9 +20,13 @@ namespace HR.LeaveManagement.MVC
         {
             services.AddHttpClient<IClient, Client>(cl => cl.BaseAddress = new Uri("https://localhost:7056"));
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
             services.AddScoped<ILeaveTypeService, LeaveTypeService>();
             services.AddScoped<ILeaveAllowcationService, LeaveAllowcationService>();
             services.AddScoped<ILeaveRequestService, LeaveRequestService>();
+
+            services.AddSingleton<ILocalStorageService, LocalStorageService>();
+
             services.AddControllersWithViews();
         }
     }
